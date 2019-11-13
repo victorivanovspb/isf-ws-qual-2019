@@ -1,0 +1,28 @@
+{
+  "name": "isf-ws-qual-2019",
+  "version": "0.0.1",
+  "description": "Небольшое тестовое задание (серверная часть)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "linter": "./node_modules/.bin/eslint ./src; exit 0;",
+    "server": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorivanovspb/isf-ws-qual-2019.git"
+  },
+  "author": "Victor I.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorivanovspb/isf-ws-qual-2019/issues"
+  },
+  "homepage": "https://github.com/victorivanovspb/isf-ws-qual-2019#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "ws": "^7.2.0"
+  }
+}
