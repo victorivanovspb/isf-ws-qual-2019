@@ -39,5 +39,14 @@ $ npm run linter
 }
 ```
 
+WebSocket-сервер ожидает подключение клиента на порту `8082`.
+```
+const port =  {
+    ws: 8082,
+    ...
+};
+const wss = new WebSocket.Server({ port: port.ws });
+```
+
 ### Обратная связь
 [github.com/victorivanovspb/isf-ws-qual-2019/issues](https://github.com/victorivanovspb/isf-ws-qual-2019/issues)
