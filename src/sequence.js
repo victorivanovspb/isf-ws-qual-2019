@@ -12,6 +12,11 @@ const rand = require('./common');
  * @returns {IterableIterator<Object>}
  */
 function* generateSequence(min = 2, max = 10) {
+    const print = (mass, limit) => {
+        console.log(`mass: ${ mass.length }, limits: ${ limit }`);
+        mass.map(item => console.log(item.stat()));
+        console.log();
+    };
     const mass = [];
     let limit = rand.getRandomInt(min, max);
 
@@ -19,14 +24,14 @@ function* generateSequence(min = 2, max = 10) {
         if (limit > 0 && rand.tossCoin()) {
             mass.push(new Obj());
             limit -= 1;
+            const state = mass[mass.length - 1].getNext();
+            print(mass, limit);
+	        yield state;
         }
         if (mass.length > 0) {
             const i = mass.length > 1 ? rand.getRandomInt(0, mass.length - 1) : 0;
             const state = mass[i].getNext();
-
-            console.log(`mass: ${ mass.length }, limits: ${ limit }`);
-            mass.map(item => console.log(item.stat()));
-            console.log();
+            print(mass, limit);
 
             if (mass[i].isComplete()) {
                 mass.splice(i,1);
