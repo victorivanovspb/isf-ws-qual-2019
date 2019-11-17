@@ -17,7 +17,7 @@ function getRandomInt(min, max) {
  * @returns {boolean}
  */
 function tossCoin() {
-    return getRandomInt(0, 100) < 50;
+    return getRandomInt(0, 100) < 5;
 }
 
 module.exports = {

@@ -28,7 +28,7 @@ wss.on('connection', ws => {
         const item = sequence.next();
         if (!item.done) {
             ws.send(JSON.stringify(item.value));
-            setTimeout(() => go(sequence), rand.getRandomInt(500, 2500));
+            setTimeout(() => go(sequence), rand.getRandomInt(50, 60));
         } else {
             console.log('Done!');
         }

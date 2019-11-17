@@ -11,7 +11,7 @@ const rand = require('./common');
  * @param {number} max - Максимальное кол-во создаваемых объектов
  * @returns {IterableIterator<Object>}
  */
-function* generateSequence(min = 2, max = 10) {
+function* generateSequence(min = 1, max = 4) {
     const print = (mass, limit) => {
         console.log(`mass: ${ mass.length }, limits: ${ limit }`);
         mass.map(item => console.log(item.stat()));

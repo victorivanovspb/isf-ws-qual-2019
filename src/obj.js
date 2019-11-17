@@ -30,7 +30,7 @@ class Obj  {
     constructor() {
         this.id = generateId();
         this.name = `Object-${ this.id }`;
-        this.states = getRandomInt(2, 6);
+        this.states = getRandomInt(1, 4);
         this.complete = false;
         this.currentState = 1;
         this.currentRate = 0;
@@ -48,7 +48,7 @@ class Obj  {
             return null;
         }
         const updateRate = () => {
-            let rate = this.currentRate + getRandomInt(10, 50);
+            let rate = this.currentRate + getRandomInt(1, 2);
             return rate < 100 ? rate : 100;
         };
         this.currentRate = updateRate();
